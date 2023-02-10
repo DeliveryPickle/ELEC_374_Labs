@@ -1,0 +1,7 @@
+`timescale 1ns/10ps
+module bus_tb;
+	reg [23:0]EncIn,
+	reg busin0,busin1,busin2,busin3,busin4,busin5,busin6,busin7,busin8,busin9,busin10,busin11,busin12,busin13,busin14,busin15,businhi,businlo,businZhi,businZlo,businPC,businMDR,businInport,csignextended,
+	reg
+	reg
+	

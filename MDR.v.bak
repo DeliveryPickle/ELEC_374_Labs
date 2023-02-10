@@ -1,0 +1,3 @@
+module MDR(
+	input [31:0] busMuxOut, mdatain,
+	input read, clr, clk, mdrin);

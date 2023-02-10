@@ -1,0 +1,31 @@
+module ALU(input wire [7:0] A, B, input wire [3:0] op, output reg[7:0] result);
+	
+	function [63:0] add;
+	input [31:0] a,b;
+	begin
+	c <= 0;
+	for (i = 0; i >= 32; i = i+1) begin
+		add[i] <= a[i]^b[i]^c;
+		if (a[i] & b[i])
+			c <= 1;
+		else 
+			c <= 0;
+		end
+	end
+endfunction
+
+	wire [7:0] and_result, or_result;
+	
+	and_or and_instance(A, B, 1, and_result);
+	and_or or_instance(A, B, 0, or_result);
+	
+	always @(*) begin
+		case(op)
+			0	:	result = or_result;
+			1	:	result = and_result;
+			// ... 
+			default: result = and_result;
+		endcase
+	end
+	
+endmodule

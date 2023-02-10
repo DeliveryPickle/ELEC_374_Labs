@@ -1,0 +1,21 @@
+INCLUDE "lpm_mux.inc";
+
+PARAMETERS
+(
+	WIDTH
+);
+
+SUBDESIGN busmux
+(
+	dataa[WIDTH-1..0]	: INPUT;
+	datab[WIDTH-1..0]	: INPUT;
+	sel					: INPUT;
+	result[WIDTH-1..0]	: OUTPUT;
+)
+BEGIN
+	result[] = lpm_mux(.data[][]=(datab[], dataa[]), .sel[]=sel) 
+		WITH (LPM_WIDTH = WIDTH, LPM_SIZE = 2, LPM_WIDTHS = 1);
+	IF !USED(result) GENERATE
+		result[] = GND;
+	END GENERATE;
+END;
