@@ -62,17 +62,17 @@ module ALU_tb;
 		
 		#20
 		//Rotate Right
-		a = 4;
+		a = -4;
 		op = 9;
 		
 		#20
 		//Rotate Left
-		a = -4;
+		a = 4;
 		op = 10;
 		
 		#20
 		//Neg
-		a = 8;
+		a = -8;
 		op = 11;
 		
 		#20

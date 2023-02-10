@@ -86,12 +86,14 @@ module ALU(input wire [31:0] a, b, input wire [3:0] op, output reg [63:0] result
 	function [31:0] neg;
 		input [31:0] a;
 		begin
+			/*
 			for (i = 0; i <= 31; i = i+1) begin
 				if (a[i] == 0) 
 					neg[i] = 1;
 				else
 					neg[i] = 0;
-			end
+			end*/
+			neg = a^32'hFFFFFFFF;
 			neg = neg + 1;
 		end
 	endfunction
