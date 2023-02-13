@@ -1,11 +1,14 @@
 module BusMux(
 	//encoder input
-	input wire [23:0] EncIn,
-	//R0Out,R1Out,R2Out,R3Out,R4Out,R5Out,R6Out,R7Out,R8Out,R9Out,R10Out,R11Out,R12Out,R13Out,R14Out,R15Out,hiOut, loOut ZhiOut, ZloOut, PCout, MDRout, inPortout,Cout
+	input R0Out,R1Out,R2Out,R3Out,R4Out,R5Out,R6Out,R7Out,R8Out,R9Out,R10Out,R11Out,R12Out,R13Out,R14Out,R15Out,hiOut, loOut, ZhiOut, ZloOut, PCout, MDRout, inPortout,Cout,
 	input  [31:0] busin0,busin1,busin2,busin3,busin4,busin5,busin6,busin7,busin8,busin9,busin10,busin11,busin12,busin13,busin14,busin15,
 	businhi,businlo,businZhi,businZlo,businPC,businMDR,businInport,csignextended,
 	output  reg [31:0] busOut
 	);
+	
+	wire [23:0] EncIn;
+	assign EncIn = {Cout,inPortout, MDRout, PCout, ZloOut,ZhiOut, loOut, hiOut,
+	R15Out,R14Out,R13Out,R12Out,R11Out,R10Out,R9Out,R8Out,R7Out,R6Out,R5Out,R4Out,R3Out,R2Out,R1Out, R0Out};
 	reg [4:0] select;
 	always @*
 		case (EncIn)

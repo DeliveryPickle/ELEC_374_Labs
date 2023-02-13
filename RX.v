@@ -1,7 +1,9 @@
-module RX(D, Q, clk, clr, le);
-	input wire [31:0] D;
-	input clk, clr, le;
-	output reg [31:0] Q;
+module RX(
+	input wire [31:0] D,
+	output reg [31:0] Q,
+	input clk, clr, le,
+	);
+
 	always @(posedge clk)
 	begin
 		if (clr == 0)

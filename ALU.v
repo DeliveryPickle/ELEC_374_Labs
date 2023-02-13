@@ -68,6 +68,7 @@ module ALU(input wire [31:0] a, b, input wire [3:0] op, output reg [63:0] result
 			mul = 0;
 			c = 0;
 			//set all to positive
+			
 			if (a[31] == 1 && b[31] == 1) begin
 				a = neg(a);
 				b = neg(b);

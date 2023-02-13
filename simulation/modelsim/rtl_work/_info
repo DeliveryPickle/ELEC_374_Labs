@@ -3,45 +3,44 @@ K3
 13
 cModel Technology
 Z0 dC:\Users\simon\Documents\Github\ELEC_374_Labs\simulation\modelsim
-vALU
-IAPae@z3lCA3Eh>Fj5OcVi0
-VR9Y[iK:B4G646VWdfCl>z3
+vbus_tb
+!i10b 1
+!s100 CGb=MnQTKlR?8<fE5LVaQ0
+IgL1QHPEiQMC:aNz`LLE^I0
+VF>G1TI[jcd?4ZAkS_nJAh2
 Z1 dC:\Users\simon\Documents\Github\ELEC_374_Labs\simulation\modelsim
-w1676314471
-8C:/Users/simon/Documents/Github/ELEC_374_Labs/ALU.v
-FC:/Users/simon/Documents/Github/ELEC_374_Labs/ALU.v
-L0 1
+w1676319750
+8C:/Users/simon/Documents/Github/ELEC_374_Labs/bus_tb.v
+FC:/Users/simon/Documents/Github/ELEC_374_Labs/bus_tb.v
+L0 2
 Z2 OV;L;10.1d;51
 r1
-31
-Z3 o-vlog01compat -work work -O0
-n@a@l@u
-!i10b 1
-!s100 JUogEjjjQIjC8fYQT:HW90
 !s85 0
-!s108 1676314496.006000
-!s107 C:/Users/simon/Documents/Github/ELEC_374_Labs/ALU.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/simon/Documents/Github/ELEC_374_Labs|C:/Users/simon/Documents/Github/ELEC_374_Labs/ALU.v|
+31
+!s108 1676320677.295000
+!s107 C:/Users/simon/Documents/Github/ELEC_374_Labs/bus_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/simon/Documents/Github/ELEC_374_Labs|C:/Users/simon/Documents/Github/ELEC_374_Labs/bus_tb.v|
 !s101 -O0
+Z3 o-vlog01compat -work work -O0
 Z4 !s92 -vlog01compat -work work +incdir+C:/Users/simon/Documents/Github/ELEC_374_Labs -O0
-vALU_tb
-!i10b 1
-!s100 UFYMmgEOFoGh>mZ84ejeU3
-I7jXF9Dbid]GCh70JLY<z`3
-VE`_QLbcAmOeKZDFMXUl3B3
+vBusMux
+I]32DOddlCQnAo@XD3R]ME2
+Vg:XPfgez@zIGWO4:gWkT_1
 R1
-w1676313213
-8C:/Users/simon/Documents/Github/ELEC_374_Labs/ALU_tb.v
-FC:/Users/simon/Documents/Github/ELEC_374_Labs/ALU_tb.v
-L0 2
+w1676320658
+8C:/Users/simon/Documents/Github/ELEC_374_Labs/BusMux.v
+FC:/Users/simon/Documents/Github/ELEC_374_Labs/BusMux.v
+L0 1
 R2
 r1
-!s85 0
 31
-!s108 1676314496.069000
-!s107 C:/Users/simon/Documents/Github/ELEC_374_Labs/ALU_tb.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/simon/Documents/Github/ELEC_374_Labs|C:/Users/simon/Documents/Github/ELEC_374_Labs/ALU_tb.v|
-!s101 -O0
 R3
+n@bus@mux
+!i10b 1
+!s100 c5Q3JiEBZVM[ZFYMA48YY3
+!s85 0
+!s108 1676320677.234000
+!s107 C:/Users/simon/Documents/Github/ELEC_374_Labs/BusMux.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/simon/Documents/Github/ELEC_374_Labs|C:/Users/simon/Documents/Github/ELEC_374_Labs/BusMux.v|
+!s101 -O0
 R4
-n@a@l@u_tb
