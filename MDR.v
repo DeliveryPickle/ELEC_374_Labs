@@ -1,5 +1,5 @@
 module MDR(
-	input [31:0] busMuxOut, mdatain,
+	input wire [31:0] busMuxOut, mdatain,
 	input read, clr, clk, mdrin,
 	output reg [31:0] q
 	);

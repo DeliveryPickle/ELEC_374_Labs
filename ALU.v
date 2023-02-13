@@ -30,6 +30,20 @@ module ALU(input wire [31:0] a, b, input wire [3:0] op, output reg [63:0] result
 	function [63:0] div;
 		input [31:0] a,b;
 		begin
+			//set all to positive
+			if (a[31] == 1 && b[31] == 1) begin
+				a = neg(a);
+				b = neg(b);
+			end 
+			else if (a[31] == 1) begin
+				a = neg(a);
+				c = 1;
+			end
+			else if (b[31] == 1) begin
+				b = neg(b);
+				c = 1;
+			end
+			
 			div = a;
 			for (i = 0; i <= 31; i = i+1) begin
 				div = div << 1;
@@ -40,6 +54,9 @@ module ALU(input wire [31:0] a, b, input wire [3:0] op, output reg [63:0] result
 					div[0] = 1;
 				div = {r, div[31:0]};
 			end
+			//compliment answer if needed
+			if (c == 1)
+				div = neg(div);
 		end
 	endfunction
 	
@@ -49,6 +66,21 @@ module ALU(input wire [31:0] a, b, input wire [3:0] op, output reg [63:0] result
 			temp = 0;
 			prev = 0;
 			mul = 0;
+			c = 0;
+			//set all to positive
+			if (a[31] == 1 && b[31] == 1) begin
+				a = neg(a);
+				b = neg(b);
+			end 
+			else if (a[31] == 1) begin
+				a = neg(a);
+				c = 1;
+			end
+			else if (b[31] == 1) begin
+				b = neg(b);
+				c = 1;
+			end
+			
 			for (i = 0; i <= 31; i = i+2) begin
 				temp = b << i;
 				if (a[i+1] == 0 && a[i] == 1&& prev == 1) begin //2
@@ -66,6 +98,9 @@ module ALU(input wire [31:0] a, b, input wire [3:0] op, output reg [63:0] result
 				prev = a[i];
 				//nothing for bitwise = 0
 			end
+			//compliment answer if needed
+			if (c == 1)
+				mul = neg(mul);
 		end
 	endfunction
 
@@ -83,7 +118,7 @@ module ALU(input wire [31:0] a, b, input wire [3:0] op, output reg [63:0] result
 		end
 	endfunction
 	
-	function [31:0] neg;
+	function [63:0] neg;
 		input [31:0] a;
 		begin
 			/*
@@ -93,7 +128,12 @@ module ALU(input wire [31:0] a, b, input wire [3:0] op, output reg [63:0] result
 				else
 					neg[i] = 0;
 			end*/
-			neg = a^32'hFFFFFFFF;
+			//add leading ones/zeroes
+			if (a[31] == 1)
+				temp = {32'hFFFFFFFF,a};
+			else
+				temp = {32'h00000000,a};
+			neg = temp^64'hFFFFFFFFFFFFFFFF;
 			neg = neg + 1;
 		end
 	endfunction

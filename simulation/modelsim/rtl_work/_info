@@ -4,10 +4,10 @@ K3
 cModel Technology
 Z0 dC:\Users\simon\Documents\Github\ELEC_374_Labs\simulation\modelsim
 vALU
-IghBgKFV0AUOY4@cGlD=_M1
+IAPae@z3lCA3Eh>Fj5OcVi0
 VR9Y[iK:B4G646VWdfCl>z3
 Z1 dC:\Users\simon\Documents\Github\ELEC_374_Labs\simulation\modelsim
-w1676045392
+w1676314471
 8C:/Users/simon/Documents/Github/ELEC_374_Labs/ALU.v
 FC:/Users/simon/Documents/Github/ELEC_374_Labs/ALU.v
 L0 1
@@ -17,20 +17,20 @@ r1
 Z3 o-vlog01compat -work work -O0
 n@a@l@u
 !i10b 1
-!s100 Ui<gkV:Zm<`F_am1G<AG62
+!s100 JUogEjjjQIjC8fYQT:HW90
 !s85 0
-!s108 1676045791.974000
+!s108 1676314496.006000
 !s107 C:/Users/simon/Documents/Github/ELEC_374_Labs/ALU.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/simon/Documents/Github/ELEC_374_Labs|C:/Users/simon/Documents/Github/ELEC_374_Labs/ALU.v|
 !s101 -O0
 Z4 !s92 -vlog01compat -work work +incdir+C:/Users/simon/Documents/Github/ELEC_374_Labs -O0
 vALU_tb
 !i10b 1
-!s100 lEQL7hUc7zeYjY]jmY11R0
-InoSj?B9j0E@PM0:<dzf3e1
+!s100 UFYMmgEOFoGh>mZ84ejeU3
+I7jXF9Dbid]GCh70JLY<z`3
 VE`_QLbcAmOeKZDFMXUl3B3
 R1
-w1676045751
+w1676313213
 8C:/Users/simon/Documents/Github/ELEC_374_Labs/ALU_tb.v
 FC:/Users/simon/Documents/Github/ELEC_374_Labs/ALU_tb.v
 L0 2
@@ -38,7 +38,7 @@ R2
 r1
 !s85 0
 31
-!s108 1676045792.114000
+!s108 1676314496.069000
 !s107 C:/Users/simon/Documents/Github/ELEC_374_Labs/ALU_tb.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/simon/Documents/Github/ELEC_374_Labs|C:/Users/simon/Documents/Github/ELEC_374_Labs/ALU_tb.v|
 !s101 -O0

@@ -37,6 +37,21 @@ module ALU_tb;
 		op = 4;
 		
 		#20
+		//Multiply
+		a = -3;
+		b = 4;
+		op = 4;
+		#20
+		//Multiply
+		a = 3;
+		b = -4;
+		op = 4;
+		#20
+		//Multiply
+		a = -3;
+		b = -4;
+		op = 4;
+		#20
 		//Divide
 		a = 24;
 		b = 12;
